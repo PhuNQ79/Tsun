@@ -1,0 +1,34 @@
+@baseUrl = http://localhost:9000/api
+
+#posts
+
+# @name getAllPosts
+GET {{baseUrl}}/posts
+
+###
+
+# @name addNewPosts
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "React1",
+    "author": "phu1"
+}
+
+###
+
+
+# @name editNewPost
+PATCH {{baseUrl}}/posts/3
+Content-Type: application/json
+
+{
+    "title": "Angular1"
+}
+
+###
+
+# @name removeNewPost
+DELETE {{baseUrl}}/posts/4
+
